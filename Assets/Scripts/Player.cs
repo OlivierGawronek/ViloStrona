@@ -4,37 +4,34 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    Rigidbody2D rg;
 
-    float speed = 20f;
+    float speed = 4f;
 
+    Vector2 move;
 
     // Start is called before the first frame update
     void Start()
     {
-        rg = GetComponent<Rigidbody2D>();
+
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
 
-        if (Input.GetKeyDown(KeyCode.W))
+        move = new Vector2(x, y);
+
+
+        //bieg i ruch
+        if (Input.GetKey(key: KeyCode.LeftShift))
         {
-            rg.AddForce(new Vector2(0 , speed * Time.deltaTime * 100));
+            transform.Translate(move * speed * Time.fixedDeltaTime * 1.5f);
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else
         {
-            rg.AddForce(new Vector2(0, -speed * Time.deltaTime * 100));
+            transform.Translate(move * speed * Time.fixedDeltaTime);
         }
-        else if (Input.GetKeyDown(KeyCode.A))
-        {
-            rg.AddForce(new Vector2(-speed * Time.deltaTime * 100, 0));
-        }
-        else if (Input.GetKeyDown(KeyCode.D))
-        {
-            rg.AddForce(new Vector2(speed * Time.deltaTime * 100, 0)); 
-        }
-        
     }
 }
