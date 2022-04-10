@@ -9,6 +9,8 @@ public class Player : MonoBehaviour
 
     Vector2 move;
 
+    public Transform cam;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,5 +35,8 @@ public class Player : MonoBehaviour
         {
             transform.Translate(move * speed * Time.fixedDeltaTime);
         }
+
+        cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
+        
     }
 }
