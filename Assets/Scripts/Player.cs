@@ -25,7 +25,7 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
-        move = new Vector2(x, y);
+        move = new Vector2(x, y).normalized;
 
         //bieg i ruch
         if (Input.GetKey(key: KeyCode.LeftShift))
