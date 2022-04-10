@@ -17,6 +17,8 @@ public class Player : MonoBehaviour
 
     }
 
+    
+
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -24,7 +26,6 @@ public class Player : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         move = new Vector2(x, y);
-
 
         //bieg i ruch
         if (Input.GetKey(key: KeyCode.LeftShift))
@@ -36,7 +37,19 @@ public class Player : MonoBehaviour
             transform.Translate(move * speed * Time.fixedDeltaTime);
         }
 
-        cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
-        
+
+
+        if (transform.position.x < -1)
+        {
+            cam.transform.position = (new Vector3(-1, transform.position.y, -10));
+        }
+        else if (transform.position.x > 1)
+        {
+            cam.transform.position = (new Vector3(1, transform.position.y, -10));
+        }
+        else if(transform.position.x < 1 && transform.position.x > -1)
+        {
+            cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
+        }
     }
 }
