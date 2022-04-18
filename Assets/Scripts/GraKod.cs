@@ -6,10 +6,13 @@ using UnityEngine.SceneManagement;
 
 public class GraKod : MonoBehaviour
 {
+    [SerializeField] private Transform winScreen;
+
     private void Start()
     {
         ZwyciestwoDopasowania zwyciestwoDopasowania = transform.GetComponent<ZwyciestwoDopasowania>();
         zwyciestwoDopasowania.OnWin += Win;
+        winScreen.gameObject.SetActive(false);
     }
 
     public void BackToKorytarz()
@@ -19,6 +22,6 @@ public class GraKod : MonoBehaviour
 
     private void Win(object sender, EventArgs e)
     {
-        Debug.Log("Wygrana!");
+        winScreen.gameObject.SetActive(true);
     }
 }
