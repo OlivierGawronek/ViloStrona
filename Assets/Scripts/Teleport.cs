@@ -18,6 +18,7 @@ public class Teleport : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        GameManager.licz = false;
         if (collision.tag.Equals("Player"))
         {
             SceneManager.LoadScene(sceneToLoad.ToString());

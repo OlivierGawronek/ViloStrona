@@ -1,24 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public Text Timertxt;
-    public float Timeint;
+    public static bool licz = false;
+    public GameObject Canv;
     
 
-    void Update()
+    private void Update()
     {
-        Timer();
+        if(licz.Equals(true))
+        Canv.transform.gameObject.SetActive(true);
     }
 
-    void Timer()
+    public void StartGameBtn()
     {
-        Timeint += Time.deltaTime;
-        float min = Timeint / 60f;
-        float sec = Timeint % 60F;
-        Timertxt.text = "Czas:" +  min.ToString("0") + ":" + sec.ToString("0");
+        SceneManager.LoadScene(Teleport.Scene.KorytarzScene.ToString());
+        licz = true;
     }
 }
