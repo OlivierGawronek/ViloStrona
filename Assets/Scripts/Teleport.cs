@@ -8,7 +8,10 @@ public class Teleport : MonoBehaviour
     public enum Scene
     {
         KorytarzScene,
-        InformatykaScene
+        InformatykaScene,
+        PolskiScene,
+        GeografiaScene,
+        MatematykaScene
     }
 
     [SerializeField] Scene sceneToLoad;

@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InformatykaScene.unity
     guid: 2628cf6cee41a0a40b72e4ed08bf082f
+  - enabled: 1
+    path: Assets/Scenes/PolskiScene.unity
+    guid: 9190be4e5852b2b4ba2cfd88cc2d0968
+  - enabled: 1
+    path: Assets/Scenes/GeografiaScene.unity
+    guid: c3033e3029ea2414ba65b14588d5a13d
+  - enabled: 1
+    path: Assets/Scenes/MatematykaScene.unity
+    guid: 88093b368a4304944ad3118459dc4dfc
   m_configObjects: {}
