@@ -11,17 +11,18 @@ public class Teleport : MonoBehaviour
         InformatykaScene,
         PolskiScene,
         GeografiaScene,
-        MatematykaScene
+        MatematykaScene,
+        HistoriaScene
     }
 
     [SerializeField] Scene sceneToLoad;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameManager.licz = false;
         if (collision.tag.Equals("Player"))
         {
             SceneManager.LoadScene(sceneToLoad.ToString());
+            GameManager.Licz = false;
         }
     }
 }

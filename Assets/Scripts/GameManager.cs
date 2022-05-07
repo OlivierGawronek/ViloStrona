@@ -6,19 +6,24 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool licz = false;
-    public GameObject Canv;
+    public static bool Licz = false;
+    [SerializeField]
+    private GameObject Canv;
+
+
+    public static int Oceny;
     
 
     private void Update()
     {
-        if(licz.Equals(true))
+        if(Licz.Equals(true))
         Canv.transform.gameObject.SetActive(true);
+        Debug.Log(Oceny);
     }
 
     public void StartGameBtn()
     {
         SceneManager.LoadScene(Teleport.Scene.KorytarzScene.ToString());
-        licz = true;
+        Licz = true;
     }
 }

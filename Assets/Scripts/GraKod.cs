@@ -23,5 +23,6 @@ public class GraKod : MonoBehaviour
     private void Win(object sender, EventArgs e)
     {
         winScreen.gameObject.SetActive(true);
+        GameManager.Oceny += 1;
     }
 }

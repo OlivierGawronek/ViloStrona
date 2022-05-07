@@ -5,8 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    public Text Timertxt;
-    public float Timeint;
+    [SerializeField]
+    private Text Timertxt;
+    private float Timeint;
 
     void Awake()
     {

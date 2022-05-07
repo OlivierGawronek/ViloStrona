@@ -5,11 +5,12 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
 
-    float speed = 4f;
+    private float speed = 4f;
 
-    Vector2 move;
+    private Vector2 move;
 
-    public Transform cam;
+    [SerializeField]
+    private Transform cam;
 
     // Start is called before the first frame update
     void Start()
