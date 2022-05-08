@@ -26,6 +26,9 @@ public class Player : MonoBehaviour
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
+        if (x < 0) transform.localScale = new Vector2(-1.2f, 1.2f);
+        else transform.localScale = new Vector2(1.2f, 1.2f);
+
         move = new Vector2(x, y).normalized;
 
         //bieg i ruch

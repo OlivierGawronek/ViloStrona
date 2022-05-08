@@ -22,8 +22,8 @@ public class Timer : MonoBehaviour
     void Timers()
     {
         Timeint += Time.deltaTime;
-        float min = Timeint / 60f;
+        int min = (int)(Timeint / 60f);
         float sec = Timeint % 60F;
-        Timertxt.text = "Czas:" + min.ToString("0") + ":" + sec.ToString("0");
+        Timertxt.text = "Czas:" + min.ToString("00") + ":" + sec.ToString("00");
     }
 }
