@@ -15,7 +15,11 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        float playerX = gameObject.transform.position.x;
+        float playerY = gameObject.transform.position.y;
 
+        playerX = PlayerPrefs.GetFloat("px");
+        playerY = PlayerPrefs.GetFloat("py");
     }
 
     
@@ -23,6 +27,9 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
+
+
         float x = Input.GetAxisRaw("Horizontal");
         float y = Input.GetAxisRaw("Vertical");
 
@@ -55,5 +62,12 @@ public class Player : MonoBehaviour
         {
             cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
         }
+    }
+
+    void PositionSave()
+    {
+        PlayerPrefs.SetFloat("px", gameObject.transform.position.x);
+        PlayerPrefs.SetFloat("py", gameObject.transform.position.y);
+        PlayerPrefs.Save();
     }
 }

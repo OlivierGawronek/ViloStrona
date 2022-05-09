@@ -10264,6 +10264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canv: {fileID: 1972995669}
+  player: {fileID: 3995557458398983544}
 --- !u!4 &1081119279
 Transform:
   m_ObjectHideFlags: 0
@@ -10929,3 +10930,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f639bb5752328548a601551cee34ff0, type: 3}
+--- !u!1 &3995557458398983544 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3995557457992272098, guid: 7f639bb5752328548a601551cee34ff0, type: 3}
+  m_PrefabInstance: {fileID: 3995557458398983543}
+  m_PrefabAsset: {fileID: 0}
