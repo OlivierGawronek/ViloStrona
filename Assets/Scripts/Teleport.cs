@@ -24,5 +24,8 @@ public class Teleport : MonoBehaviour
             SceneManager.LoadScene(sceneToLoad.ToString());
             GameManager.Licz = false;
         }
+        Debug.Log(sceneToLoad);
     }
 }
+
+   

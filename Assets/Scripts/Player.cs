@@ -15,6 +15,7 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
         float playerX = gameObject.transform.position.x;
         float playerY = gameObject.transform.position.y;
 

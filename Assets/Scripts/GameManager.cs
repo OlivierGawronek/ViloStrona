@@ -10,8 +10,6 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject Canv;
 
-    [SerializeField]
-    GameObject player;
 
     public Vector2 playerPosition;
 
@@ -26,7 +24,17 @@ public class GameManager : MonoBehaviour
     {
         if(Licz.Equals(true))
         Canv.transform.gameObject.SetActive(true);
-        Debug.Log(Oceny);
+
+        if (Input.GetKeyDown(KeyCode.R)) Oceny = 4;
+
+        if(Oceny == 4)
+        {
+            SceneManager.LoadScene("Wygrana");
+            Time.timeScale = 0;
+        }
+
+
+
 
     }
 

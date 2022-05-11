@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HistoriaScene.unity
     guid: aff4da73215c2144286f6b4631bc51df
+  - enabled: 1
+    path: Assets/Scenes/Wygrana.unity
+    guid: 882eaf42a65f5da4c8e96145cfc240bc
   m_configObjects: {}

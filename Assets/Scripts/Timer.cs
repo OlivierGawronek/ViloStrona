@@ -7,7 +7,11 @@ public class Timer : MonoBehaviour
 {
     [SerializeField]
     private Text Timertxt;
-    private float Timeint;
+
+    [SerializeField]
+    private Text PktTxt;
+
+    public static float Timeint;
 
     void Awake()
     {
@@ -17,6 +21,7 @@ public class Timer : MonoBehaviour
     void Update()
     {
         Timers();
+        Oceny();
     }
 
     void Timers()
@@ -25,5 +30,10 @@ public class Timer : MonoBehaviour
         int min = (int)(Timeint / 60f);
         float sec = Timeint % 60F;
         Timertxt.text = "Czas:" + min.ToString("00") + ":" + sec.ToString("00");
+    }
+
+    void Oceny()
+    {
+        PktTxt.text = "ILOSC OCEN: " + GameManager.Oceny.ToString("0");
     }
 }
