@@ -22,10 +22,10 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        if(Licz.Equals(true))
+        if(Licz.Equals(true) && Canv != null)
         Canv.transform.gameObject.SetActive(true);
 
-        if (Input.GetKeyDown(KeyCode.R)) Oceny = 4;
+        //if (Input.GetKeyDown(KeyCode.R)) Oceny = 4;
 
         if(Oceny == 4)
         {
@@ -34,7 +34,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-
+        
 
     }
 

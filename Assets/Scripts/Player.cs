@@ -35,21 +35,23 @@ public class Player : MonoBehaviour
         float y = Input.GetAxisRaw("Vertical");
 
         if (x < 0) transform.localScale = new Vector2(-1.2f, 1.2f);
-        else transform.localScale = new Vector2(1.2f, 1.2f);
+        if(x > 0) transform.localScale = new Vector2(1.2f, 1.2f);
 
         move = new Vector2(x, y).normalized;
 
+
         //bieg i ruch
-        if (Input.GetKey(key: KeyCode.LeftShift))
-        {
-            transform.Translate(move * speed * Time.fixedDeltaTime * 1.5f);
-        }
-        else
-        {
+
+        //if (Input.GetKey(key: KeyCode.LeftShift))
+        //{
+        //    transform.Translate(move * speed * Time.fixedDeltaTime * 1.5f);
+        //}
+        //else
+        //{
             transform.Translate(move * speed * Time.fixedDeltaTime);
-        }
+        //}
 
-
+        
 
         if (transform.position.x < -1)
         {
