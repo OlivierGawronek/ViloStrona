@@ -44,8 +44,11 @@ public class SystemDopasowania : MonoBehaviour
         if (Mathf.Abs(this.transform.position.x - correctForm.position.x) <= 0.5f && Mathf.Abs(this.transform.position.y - correctForm.position.y) <= 0.5f)
         {
             this.transform.position = new Vector3(correctForm.position.x, correctForm.position.y, 0);
+            if (!isOnPlace)
+            {
+                zwyciestwoDopasowania.AddPoints();
+            }
             isOnPlace = true;
-            zwyciestwoDopasowania.AddPoints();
         }
         else
         {
