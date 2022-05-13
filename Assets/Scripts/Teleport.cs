@@ -16,10 +16,12 @@ public class Teleport : MonoBehaviour
     }
 
     [SerializeField] Scene sceneToLoad;
+    [SerializeField] int minOcen;
+    [SerializeField] int maxOcen;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.tag.Equals("Player"))
+        if (collision.tag.Equals("Player") && GameManager.Oceny >= minOcen && GameManager.Oceny <= maxOcen)
         {
             SceneManager.LoadScene(sceneToLoad.ToString());
             GameManager.Licz = false;

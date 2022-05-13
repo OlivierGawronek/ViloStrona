@@ -10582,6 +10582,22 @@ PrefabInstance:
       value: SalaOdHistoriTP
       objectReference: {fileID: 0}
     - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: maxOcen
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: minOcen
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: maxLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: minLevel
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
       propertyPath: sceneToLoad
       value: 5
       objectReference: {fileID: 0}
@@ -10673,11 +10689,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Canv: {fileID: 1972995669}
-  player: {fileID: 3995557458398983544}
-  TP1: {fileID: 1764396010}
-  TP2: {fileID: 2128048282}
-  TP3: {fileID: 1255444231}
-  TP4: {fileID: 1454170723}
   playerPosition: {x: 0, y: 0}
 --- !u!4 &1081119279
 Transform:
@@ -10693,11 +10704,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1255444231 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
-  m_PrefabInstance: {fileID: 1419980185}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1286252007
 GameObject:
   m_ObjectHideFlags: 0
@@ -10849,6 +10855,22 @@ PrefabInstance:
       value: SalaOdPolskiegoTP
       objectReference: {fileID: 0}
     - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: maxOcen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: minOcen
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: maxLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: minLevel
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
       propertyPath: sceneToLoad
       value: 2
       objectReference: {fileID: 0}
@@ -10910,11 +10932,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
---- !u!1 &1454170723 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
-  m_PrefabInstance: {fileID: 1573226352}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1573226352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10925,6 +10942,22 @@ PrefabInstance:
     - target: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
       propertyPath: m_Name
       value: SalaOdGeografiTP
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: maxOcen
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: minOcen
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: maxLevel
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: minLevel
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4614838421696475562, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
       propertyPath: sceneToLoad
@@ -11070,11 +11103,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1764396010 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
-  m_PrefabInstance: {fileID: 1300853288}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1889773958
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11347,11 +11375,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Timertxt: {fileID: 40317353}
   PktTxt: {fileID: 1938987565}
---- !u!1 &2128048282 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
-  m_PrefabInstance: {fileID: 1055647174}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3995557458398983543
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11481,8 +11504,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7f639bb5752328548a601551cee34ff0, type: 3}
---- !u!1 &3995557458398983544 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3995557457992272098, guid: 7f639bb5752328548a601551cee34ff0, type: 3}
-  m_PrefabInstance: {fileID: 3995557458398983543}
-  m_PrefabAsset: {fileID: 0}
