@@ -40,11 +40,10 @@ public class Player : MonoBehaviour
     void FixedUpdate()
     {
         cam = GameObject.Find("MainCamera");
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
         if (canMove)
         {
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
-
             if (x < 0) transform.localScale = new Vector2(-1.2f, 1.2f);
             if (x > 0) transform.localScale = new Vector2(1.2f, 1.2f);
 
@@ -71,6 +70,14 @@ public class Player : MonoBehaviour
                 }
             }
         }
+        else
+        {
+            x = 0;
+            y = 0;
+        }
+
+        if (x != 0 || y != 0) animator.SetFloat("Speed", 4);
+        else animator.SetFloat("Speed", 0);
     }
 
     
