@@ -18,6 +18,9 @@ public class GraKod : MonoBehaviour
     public void BackToKorytarz()
     {
         SceneManager.LoadScene(Teleport.Scene.KorytarzScene.ToString());
+        Teleport.player.SetActive(true);
+
+        
     }
 
     private void Win(object sender, EventArgs e)
