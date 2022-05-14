@@ -48,31 +48,27 @@ public class Player : MonoBehaviour
             if (x < 0) transform.localScale = new Vector2(-1.2f, 1.2f);
             if (x > 0) transform.localScale = new Vector2(1.2f, 1.2f);
 
-        if (x != 0 || y != 0) animator.SetFloat("Speed", 4);
-        else animator.SetFloat("Speed", 0);
+            if (x != 0 || y != 0) animator.SetFloat("Speed", 4);
+            else animator.SetFloat("Speed", 0);
 
-        move = new Vector2(x, y).normalized;
+            move = new Vector2(x, y).normalized;
 
-        transform.Translate(move * speed * Time.fixedDeltaTime);
+            transform.Translate(move * speed * Time.fixedDeltaTime);
 
-
-
-        
-
-
-        if (cam != null)
-        {
-            if (transform.position.x < -1)
+            if (cam != null)
             {
-                cam.transform.position = (new Vector3(-1, transform.position.y, -10));
-            }
-            else if (transform.position.x > 1)
-            {
-                cam.transform.position = (new Vector3(1, transform.position.y, -10));
-            }
-            else if (transform.position.x < 1 && transform.position.x > -1)
-            {
-                cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
+                if (transform.position.x < -1)
+                {
+                    cam.transform.position = (new Vector3(-1, transform.position.y, -10));
+                }
+                else if (transform.position.x > 1)
+                {
+                    cam.transform.position = (new Vector3(1, transform.position.y, -10));
+                }
+                else if (transform.position.x < 1 && transform.position.x > -1)
+                {
+                    cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
+                }
             }
         }
     }
