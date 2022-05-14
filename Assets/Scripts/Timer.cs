@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
+    private static Timer instance;
+
+
     [SerializeField]
     private Text Timertxt;
 
@@ -15,7 +18,13 @@ public class Timer : MonoBehaviour
 
     void Awake()
     {
-        DontDestroyOnLoad(transform.gameObject);
+
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(gameObject);
     }
 
     void Update()

@@ -1,26 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
+    private static Player instance;
     private float speed = 4f;
 
     private Vector2 move;
 
     [SerializeField]
-    private Transform cam;
+    private GameObject cam;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            cam = GameObject.Find("MainCamera");
+            Destroy(gameObject);
+        }
 
-        float playerX = gameObject.transform.position.x;
-        float playerY = gameObject.transform.position.y;
 
-        playerX = PlayerPrefs.GetFloat("px");
-        playerY = PlayerPrefs.GetFloat("py");
     }
 
     
@@ -28,7 +35,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        
+        cam = GameObject.Find("MainCamera");
 
 
         float x = Input.GetAxisRaw("Horizontal");
@@ -39,38 +46,30 @@ public class Player : MonoBehaviour
 
         move = new Vector2(x, y).normalized;
 
+        transform.Translate(move * speed * Time.fixedDeltaTime);
 
-        //bieg i ruch
 
-        //if (Input.GetKey(key: KeyCode.LeftShift))
-        //{
-        //    transform.Translate(move * speed * Time.fixedDeltaTime * 1.5f);
-        //}
-        //else
-        //{
-            transform.Translate(move * speed * Time.fixedDeltaTime);
-        //}
 
         
 
-        if (transform.position.x < -1)
+
+        if (cam != null)
         {
-            cam.transform.position = (new Vector3(-1, transform.position.y, -10));
-        }
-        else if (transform.position.x > 1)
-        {
-            cam.transform.position = (new Vector3(1, transform.position.y, -10));
-        }
-        else if(transform.position.x < 1 && transform.position.x > -1)
-        {
-            cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
+            
+            if (transform.position.x < -1)
+            {
+                cam.transform.position = (new Vector3(-1, transform.position.y, -10));
+            }
+            else if (transform.position.x > 1)
+            {
+                cam.transform.position = (new Vector3(1, transform.position.y, -10));
+            }
+            else if (transform.position.x < 1 && transform.position.x > -1)
+            {
+                cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
+            }
         }
     }
 
-    void PositionSave()
-    {
-        PlayerPrefs.SetFloat("px", gameObject.transform.position.x);
-        PlayerPrefs.SetFloat("py", gameObject.transform.position.y);
-        PlayerPrefs.Save();
-    }
+    
 }
