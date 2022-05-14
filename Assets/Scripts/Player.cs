@@ -31,7 +31,6 @@ public class Player : MonoBehaviour
 
         if (canMove)
         {
-
             float x = Input.GetAxisRaw("Horizontal");
             float y = Input.GetAxisRaw("Vertical");
 
