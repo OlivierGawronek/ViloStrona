@@ -9,7 +9,8 @@ public class WygranaCanv : MonoBehaviour
     [SerializeField]
     private Text Wintxt;
 
-    // Start is called before the first frame update
+
+
     void Start()
     {
         WygranaTime();

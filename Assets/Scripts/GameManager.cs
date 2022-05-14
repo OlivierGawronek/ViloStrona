@@ -6,7 +6,10 @@ using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public static bool Licz = false;
+
+    private static GameManager instance;
+
+
     [SerializeField]
     private GameObject Canv;
 
@@ -17,14 +20,16 @@ public class GameManager : MonoBehaviour
 
     private void Awake()
     {
-        
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else Destroy(gameObject);
     }
 
     private void Update()
     {
-        if(Licz.Equals(true) && Canv != null)
-        Canv.transform.gameObject.SetActive(true);
-
         //if (Input.GetKeyDown(KeyCode.R)) Oceny = 4;
 
         if(Oceny == 4)
@@ -41,6 +46,5 @@ public class GameManager : MonoBehaviour
     public void StartGameBtn()
     {
         SceneManager.LoadScene(Teleport.Scene.KorytarzScene.ToString());
-        Licz = true;
     }
 }

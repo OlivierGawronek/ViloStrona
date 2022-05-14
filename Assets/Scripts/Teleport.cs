@@ -19,14 +19,17 @@ public class Teleport : MonoBehaviour
     [SerializeField] int minOcen;
     [SerializeField] int maxOcen;
 
+    public static GameObject player;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag.Equals("Player") && GameManager.Oceny >= minOcen && GameManager.Oceny <= maxOcen)
         {
+            player = GameObject.Find("Gracz");
+            player.transform.position = new Vector2(gameObject.transform.position.x, gameObject.transform.position.y - 0.5f);
+            player.SetActive(false);
             SceneManager.LoadScene(sceneToLoad.ToString());
-            GameManager.Licz = false;
         }
-        Debug.Log(sceneToLoad);
     }
 }
 

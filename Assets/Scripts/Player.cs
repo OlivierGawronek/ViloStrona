@@ -1,26 +1,36 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
+    private static Player instance;
+    private float speed = 3f;
 
-    private float speed = 4f;
-    public bool canMove = true;
+    [SerializeField]
+    private Animator animator;
+
     private Vector2 move;
 
     [SerializeField]
-    private Transform cam;
+    private GameObject cam;
 
     // Start is called before the first frame update
     void Start()
     {
+        if (instance == null)
+        {
+            instance = this;
+            DontDestroyOnLoad(gameObject);
+        }
+        else
+        {
+            cam = GameObject.Find("MainCamera");
+            Destroy(gameObject);
+        }
 
-        float playerX = gameObject.transform.position.x;
-        float playerY = gameObject.transform.position.y;
 
-        playerX = PlayerPrefs.GetFloat("px");
-        playerY = PlayerPrefs.GetFloat("py");
     }
 
     
@@ -28,32 +38,29 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        cam = GameObject.Find("MainCamera");
 
-        if (canMove)
+
+        float x = Input.GetAxisRaw("Horizontal");
+        float y = Input.GetAxisRaw("Vertical");
+
+        if (x < 0) transform.localScale = new Vector2(-1.2f, 1.2f);
+        if(x > 0) transform.localScale = new Vector2(1.2f, 1.2f);
+
+        if (x != 0 || y != 0) animator.SetFloat("Speed", 4);
+        else animator.SetFloat("Speed", 0);
+
+        move = new Vector2(x, y).normalized;
+
+        transform.Translate(move * speed * Time.fixedDeltaTime);
+
+
+
+        
+
+
+        if (cam != null)
         {
-
-            float x = Input.GetAxisRaw("Horizontal");
-            float y = Input.GetAxisRaw("Vertical");
-
-            if (x < 0) transform.localScale = new Vector2(-1.2f, 1.2f);
-            if (x > 0) transform.localScale = new Vector2(1.2f, 1.2f);
-
-            move = new Vector2(x, y).normalized;
-
-
-            //bieg i ruch
-
-            //if (Input.GetKey(key: KeyCode.LeftShift))
-            //{
-            //    transform.Translate(move * speed * Time.fixedDeltaTime * 1.5f);
-            //}
-            //else
-            //{
-            transform.Translate(move * speed * Time.fixedDeltaTime);
-            //}
-
-
-
             if (transform.position.x < -1)
             {
                 cam.transform.position = (new Vector3(-1, transform.position.y, -10));
@@ -66,14 +73,8 @@ public class Player : MonoBehaviour
             {
                 cam.transform.position = (new Vector3(transform.position.x, transform.position.y, -10));
             }
-
         }
     }
 
-    void PositionSave()
-    {
-        PlayerPrefs.SetFloat("px", gameObject.transform.position.x);
-        PlayerPrefs.SetFloat("py", gameObject.transform.position.y);
-        PlayerPrefs.Save();
-    }
+    
 }
