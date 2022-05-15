@@ -7,6 +7,9 @@ public class Nauczyciel : MonoBehaviour
     private DialogueTrigger dialogueTrigger;
     private bool wasTriggered;
 
+    [SerializeField] int minDial;
+    [SerializeField] int maxDial;
+
     private void Awake()
     {
         dialogueTrigger = GetComponent<DialogueTrigger>();
@@ -15,12 +18,13 @@ public class Nauczyciel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && !wasTriggered)
+            if (collision.CompareTag("Player") && !wasTriggered && GameManager.dInt >= minDial && GameManager.dInt <= maxDial)
         {
             dialogueTrigger.TriggerDialogue();
             Player player = collision.GetComponent<Player>();
             player.canMove = false;
             wasTriggered = true;
+            GameManager.dInt++;
         }
     }
 }

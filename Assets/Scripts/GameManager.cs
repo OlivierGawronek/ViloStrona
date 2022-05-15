@@ -13,9 +13,12 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     private GameObject Canv;
 
+    
+
 
     public Vector2 playerPosition;
 
+    public static int dInt;
     public static int Oceny;
 
     private void Awake()
@@ -39,7 +42,7 @@ public class GameManager : MonoBehaviour
         }
 
 
-        
+        Debug.Log(dInt);
 
     }
 
