@@ -20,7 +20,8 @@ public class Blackout : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(blackout == true && player.transform.position.y > -2.250147 && player.transform.position.y < 0.472082f)
+        Debug.Log(blackout);
+        if(blackout == true && player.transform.position.y > -2.158f && player.transform.position.y < 0.586f)
         {
             blackoutobj.SetActive(true);
         }
