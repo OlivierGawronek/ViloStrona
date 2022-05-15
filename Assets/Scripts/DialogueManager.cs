@@ -10,6 +10,9 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    [SerializeField]
+    private GameObject UI;
+
     public Image image;
 
     private Queue<string> sentences;
@@ -21,6 +24,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+        UI.SetActive(true);
         animator.SetBool("IsOpen", true);
 
         nameText.text = dialogue.name;
@@ -64,5 +68,6 @@ public class DialogueManager : MonoBehaviour
         animator.SetBool("IsOpen", false);
         Player player = FindObjectOfType<Player>();
         player.canMove = true;
+        UI.SetActive(false);
     }
 }
