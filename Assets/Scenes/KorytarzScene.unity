@@ -11127,8 +11127,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -198.29066, y: -71}
-  m_SizeDelta: {x: 103.4195, y: 30}
+  m_AnchoredPosition: {x: -198.29066, y: -76.26161}
+  m_SizeDelta: {x: 103.4195, y: 40.5232}
   m_Pivot: {x: 0.5000004, y: 0.5}
 --- !u!114 &1368718273
 MonoBehaviour:
@@ -11163,7 +11163,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 'Imie
+
+    Nazwisko'
 --- !u!222 &1368718274
 CanvasRenderer:
   m_ObjectHideFlags: 0
