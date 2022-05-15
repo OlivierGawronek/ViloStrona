@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
 
     public Animator animator;
 
+    public Animator Camera;
+
     [SerializeField]
     private GameObject UI;
 
@@ -69,5 +71,6 @@ public class DialogueManager : MonoBehaviour
         Player player = FindObjectOfType<Player>();
         player.canMove = true;
         UI.SetActive(false);
+        Camera.SetBool("IsShaking", false);
     }
 }

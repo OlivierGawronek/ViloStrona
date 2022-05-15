@@ -433,6 +433,7 @@ MonoBehaviour:
   nameText: {fileID: 1368718273}
   dialogueText: {fileID: 708983070}
   animator: {fileID: 1628032488}
+  Camera: {fileID: 519420033}
   UI: {fileID: 2038027518}
   image: {fileID: 2074553435}
 --- !u!4 &249782369
@@ -572,6 +573,7 @@ GameObject:
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
   - component: {fileID: 519420030}
+  - component: {fileID: 519420033}
   m_Layer: 0
   m_Name: MainCamera
   m_TagString: MainCamera
@@ -677,6 +679,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &519420033
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 7a61ec213c811aa43b8a081850a607eb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &708983068
 GameObject:
   m_ObjectHideFlags: 0
@@ -12507,6 +12528,48 @@ PrefabInstance:
       propertyPath: dialogue.name
       value: "Tajemniczy G\u0142os"
       objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[0]
+      value: "Zbud\u017A si\u0119..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[1]
+      value: ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[2]
+      value: "Zbud\u017A si\u0119!..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[3]
+      value: WSTAWAJ!
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[4]
+      value: "Nie spimy na korytarzu, zw\u0142aszcza w takiej presti\u017Cowej szkole
+        perspektyw."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[5]
+      value: "Matury za dziesi\u0119\u0107 minut a ty sobie drzemk\u0119 robisz jak
+        masz jeszcze kilka przedmiot\xF3w do zaliczenia! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[6]
+      value: "Biegnij to moze dasz rade zaliczy\u0107!"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[7]
+      value: "Mo\u017Ce ci si\u0119 uda w co w\u0105tpi\u0119..."
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.sentences.Array.data[8]
+      value: "ale spr\xF3buj!"
+      objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691719, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: m_Color.a
       value: 1
@@ -12523,9 +12586,13 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691769, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: Camera
+      value: 
+      objectReference: {fileID: 519420033}
     - target: {fileID: 7439069328391691771, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: m_Name
-      value: Nauczyciel
+      value: "Pocz\u0105tek"
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}

@@ -10,6 +10,8 @@ public class Nauczyciel : MonoBehaviour
     [SerializeField] int minDial;
     [SerializeField] int maxDial;
 
+    public Animator Camera;
+
     private void Awake()
     {
         dialogueTrigger = GetComponent<DialogueTrigger>();
@@ -18,13 +20,17 @@ public class Nauczyciel : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (collision.CompareTag("Player") && !wasTriggered && GameManager.dInt >= minDial && GameManager.dInt <= maxDial)
         {
+            if (GameManager.dInt == 0) Camera.SetBool("IsShaking", true);
+            
             dialogueTrigger.TriggerDialogue();
             Player player = collision.GetComponent<Player>();
             player.canMove = false;
             wasTriggered = true;
             GameManager.dInt++;
+            //Destroy(gameObject);
         }
     }
 }
