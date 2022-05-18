@@ -10,12 +10,28 @@ public class Nauczyciel : MonoBehaviour
     [SerializeField] int minDial;
     [SerializeField] int maxDial;
 
+    [SerializeField] GameObject player;
+
     public Animator Camera;
 
     private void Awake()
     {
         dialogueTrigger = GetComponent<DialogueTrigger>();
         wasTriggered = false;
+    }
+
+    private void Update()
+    {
+        player = GameObject.Find("Gracz");
+
+        if(gameObject.transform.position.x > player.transform.position.x)
+        {
+            transform.localScale = new Vector2(-1.2f, 1.2f);
+        }
+        else if(gameObject.transform.position.x < player.transform.position.x)
+        {
+            transform.localScale = new Vector2(1.2f, 1.2f);
+        }    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

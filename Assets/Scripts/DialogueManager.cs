@@ -12,6 +12,9 @@ public class DialogueManager : MonoBehaviour
 
     public Animator Camera;
 
+    private GameObject CamObjl;
+
+
     [SerializeField]
     private GameObject UI;
 
@@ -22,10 +25,12 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         sentences = new Queue<string>();
+        Camera = CamObjl.GetComponent<Animator>();
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
+        CamObjl = GameObject.Find("MainCamera");
         UI.SetActive(true);
         animator.SetBool("IsOpen", true);
 
@@ -72,5 +77,6 @@ public class DialogueManager : MonoBehaviour
         player.canMove = true;
         UI.SetActive(false);
         Camera.SetBool("IsShaking", false);
+        Camera.enabled = false;
     }
 }
