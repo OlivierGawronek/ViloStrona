@@ -9,11 +9,14 @@ public class WygranaCanv : MonoBehaviour
     [SerializeField]
     private Text Wintxt;
 
-
+    private GameObject Canvstart;
 
     void Start()
     {
         WygranaTime();
+        Canvstart = GameObject.Find("CanvasStart");
+
+        Destroy(Canvstart);
     }
 
     // Update is called once per frame

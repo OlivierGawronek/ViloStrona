@@ -15,6 +15,8 @@ public class DialogueManager : MonoBehaviour
 
     private GameObject CamObjl;
 
+    private GameObject playerEnd;
+
 
     [SerializeField]
     private GameObject UI;
@@ -83,8 +85,9 @@ public class DialogueManager : MonoBehaviour
 
         if (GameManager.Oceny == 5)
         {
+            playerEnd = GameObject.Find("Gracz");
             SceneManager.LoadScene("Wygrana");
-            Time.timeScale = 0;
+            playerEnd.transform.position = new Vector2(0, 0);
 
         }
     }

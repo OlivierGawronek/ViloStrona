@@ -33,7 +33,7 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
-        //if (Input.GetKeyDown(KeyCode.R)) Oceny = 4;
+        if (Input.GetKeyDown(KeyCode.R)) SceneManager.LoadScene("Wygrana");
 
         
 
