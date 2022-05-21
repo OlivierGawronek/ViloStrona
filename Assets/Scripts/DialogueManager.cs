@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class DialogueManager : MonoBehaviour
@@ -27,6 +28,7 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         Camera = CamObjl.GetComponent<Animator>();
     }
+
 
     public void StartDialogue(Dialogue dialogue)
     {
@@ -78,5 +80,12 @@ public class DialogueManager : MonoBehaviour
         UI.SetActive(false);
         Camera.SetBool("IsShaking", false);
         Camera.enabled = false;
+
+        if (GameManager.Oceny == 5)
+        {
+            SceneManager.LoadScene("Wygrana");
+            Time.timeScale = 0;
+
+        }
     }
 }

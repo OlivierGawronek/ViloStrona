@@ -35,14 +35,8 @@ public class GameManager : MonoBehaviour
     {
         //if (Input.GetKeyDown(KeyCode.R)) Oceny = 4;
 
-        if(Oceny == 4)
-        {
-            SceneManager.LoadScene("Wygrana");
-            Time.timeScale = 0;
-        }
+        
 
-
-        Debug.Log(dInt);
 
     }
 

@@ -9,6 +9,8 @@ public class Nauczyciel : MonoBehaviour
 
     [SerializeField] int minDial;
     [SerializeField] int maxDial;
+    [SerializeField] int minOcen;
+    [SerializeField] int maxOcen;
 
     [SerializeField] GameObject player;
 
@@ -37,9 +39,15 @@ public class Nauczyciel : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         
-        if (collision.CompareTag("Player") && !wasTriggered && GameManager.dInt >= minDial && GameManager.dInt <= maxDial)
+        if (collision.CompareTag("Player") && !wasTriggered && GameManager.dInt >= minDial && GameManager.dInt <= maxDial && GameManager.Oceny >= minOcen && GameManager.Oceny <= maxOcen)
         {
-            if (GameManager.dInt == 0) Camera.SetBool("IsShaking", true);
+            if (GameManager.dInt == 0)
+            {
+                Camera.SetBool("IsShaking", true);
+                Camera.enabled = true;
+            }
+                
+                
             
             dialogueTrigger.TriggerDialogue();
             Player player = collision.GetComponent<Player>();
