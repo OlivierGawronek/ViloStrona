@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Nauczyciel : MonoBehaviour
 {
-    private DialogueTrigger dialogueTrigger;
-    private bool wasTriggered;
+    public DialogueTrigger dialogueTrigger;
+    public bool wasTriggered;
 
-    [SerializeField] int minDial;
-    [SerializeField] int maxDial;
-    [SerializeField] int minOcen;
-    [SerializeField] int maxOcen;
+    public int minDial;
+    public int maxDial;
+    public int minOcen;
+    public int maxOcen;
 
     [SerializeField] GameObject player;
 
