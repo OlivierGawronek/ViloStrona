@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class Marcjan : Nauczyciel
 {
-    [SerializeField]
-    private bool privateCheck;
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && GameManager.dInt >= minDial && GameManager.dInt <= maxDial && GameManager.Oceny >= minOcen && GameManager.Oceny <= maxOcen)
+        if (collision.CompareTag("Player") && !wasTriggered && GameManager.dInt >= minDial && GameManager.dInt <= maxDial && GameManager.Oceny >= minOcen && GameManager.Oceny <= maxOcen)
         {
             dialogueTrigger.TriggerDialogue();
             Player player = collision.GetComponent<Player>();
-            player.canMove = false;
+            Player.canMove = false;
+            wasTriggered = true;
+            //Destroy(gameObject);
         }
     }
 }

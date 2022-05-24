@@ -79,7 +79,7 @@ public class DialogueManager : MonoBehaviour
     {
         animator.SetBool("IsOpen", false);
         Player player = FindObjectOfType<Player>();
-        player.canMove = true;
+        Player.canMove = true;
         UI.SetActive(false);
         Camera.SetBool("IsShaking", false);
         Camera.enabled = false;

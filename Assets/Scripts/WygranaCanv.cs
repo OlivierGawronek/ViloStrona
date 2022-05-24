@@ -17,12 +17,16 @@ public class WygranaCanv : MonoBehaviour
         Canvstart = GameObject.Find("CanvasStart");
 
         Destroy(Canvstart);
+
+
+
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        Player.canMove = false;
     }
     void WygranaTime()
     {

@@ -8,7 +8,7 @@ public class Player : MonoBehaviour
     private static Player instance;
     private float speed = 3f;
 
-    public bool canMove = true;
+    public static bool canMove = true;
     [SerializeField]
     private Animator animator;
 

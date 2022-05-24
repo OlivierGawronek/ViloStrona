@@ -38,6 +38,7 @@ public class Nauczyciel : MonoBehaviour
                 transform.localScale = new Vector2(1.2f, 1.2f);
             }
         }
+        //Debug.Log(GameManager.dInt);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -45,7 +46,7 @@ public class Nauczyciel : MonoBehaviour
         
         if (collision.CompareTag("Player") && !wasTriggered && GameManager.dInt >= minDial && GameManager.dInt <= maxDial && GameManager.Oceny >= minOcen && GameManager.Oceny <= maxOcen)
         {
-            if (GameManager.dInt == 0)
+            if (GameManager.dInt == 0 && Camera != null)
             {
                 Camera.SetBool("IsShaking", true);
                 Camera.enabled = true;
@@ -55,7 +56,7 @@ public class Nauczyciel : MonoBehaviour
             
             dialogueTrigger.TriggerDialogue();
             Player player = collision.GetComponent<Player>();
-            player.canMove = false;
+            Player.canMove = false;
             wasTriggered = true;
             GameManager.dInt++;
             //Destroy(gameObject);
