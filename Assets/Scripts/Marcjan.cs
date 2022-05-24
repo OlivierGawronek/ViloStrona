@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Marcjan : Nauczyciel
 {
-
-
+    [SerializeField]
+    private bool privateCheck;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

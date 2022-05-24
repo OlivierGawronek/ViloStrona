@@ -26,14 +26,18 @@ public class Nauczyciel : MonoBehaviour
     {
         player = GameObject.Find("Gracz");
 
-        if(gameObject.transform.position.x > player.transform.position.x)
+
+        if (player != null)
         {
-            transform.localScale = new Vector2(-1.2f, 1.2f);
+            if (gameObject.transform.position.x > player.transform.position.x)
+            {
+                transform.localScale = new Vector2(-1.2f, 1.2f);
+            }
+            else if (gameObject.transform.position.x < player.transform.position.x)
+            {
+                transform.localScale = new Vector2(1.2f, 1.2f);
+            }
         }
-        else if(gameObject.transform.position.x < player.transform.position.x)
-        {
-            transform.localScale = new Vector2(1.2f, 1.2f);
-        }    
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

@@ -28,7 +28,8 @@ public class DialogueManager : MonoBehaviour
     private void Awake()
     {
         sentences = new Queue<string>();
-        Camera = CamObjl.GetComponent<Animator>();
+        //Camera = CamObjl.GetComponent<Animator>();
+
     }
 
 
