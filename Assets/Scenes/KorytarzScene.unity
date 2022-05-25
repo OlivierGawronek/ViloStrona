@@ -511,7 +511,7 @@ PrefabInstance:
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.image
       value: 
-      objectReference: {fileID: 21300000, guid: 8873fa56f6e6b8b4e9cab1d1ef43e8cd, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e9abac7a38281b4f822be7aab2f9a59, type: 3}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 9
@@ -11433,6 +11433,10 @@ PrefabInstance:
       value: Nil Power
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.image
+      value: 
+      objectReference: {fileID: 21300000, guid: 248853a5c89638a4d86999b7b2a6c64c, type: 3}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 4
       objectReference: {fileID: 0}
@@ -11463,9 +11467,17 @@ PrefabInstance:
         kt\xF3ry by\u0142 kompletnym \u015Bwirem."
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691719, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: m_Size.x
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691719, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: m_Size.y
+      value: 0.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691719, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5fcd8bd9444124c498fe97e669fa7507, type: 3}
+      objectReference: {fileID: 21300000, guid: 248853a5c89638a4d86999b7b2a6c64c, type: 3}
     - target: {fileID: 7439069328391691719, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -11724,7 +11736,7 @@ PrefabInstance:
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.image
       value: 
-      objectReference: {fileID: 21300000, guid: 128e78257ca5cba4da7fabf419cb9185, type: 3}
+      objectReference: {fileID: 21300000, guid: 040e4b6ac4afbbf4eb3844df3aa25ed7, type: 3}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 6
@@ -12730,7 +12742,7 @@ PrefabInstance:
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.image
       value: 
-      objectReference: {fileID: 21300000, guid: 8873fa56f6e6b8b4e9cab1d1ef43e8cd, type: 3}
+      objectReference: {fileID: 21300000, guid: 1e9abac7a38281b4f822be7aab2f9a59, type: 3}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 5
@@ -13544,6 +13556,10 @@ PrefabInstance:
       value: Nil Power
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.image
+      value: 
+      objectReference: {fileID: 21300000, guid: 248853a5c89638a4d86999b7b2a6c64c, type: 3}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 6
       objectReference: {fileID: 0}
@@ -14353,6 +14369,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Global Volume
       objectReference: {fileID: 0}
+    - target: {fileID: 7404801183073755827, guid: 1fa7965e38f558d4c8259140b522e4cf, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7404801183073755981, guid: 1fa7965e38f558d4c8259140b522e4cf, type: 3}
       propertyPath: m_RootOrder
       value: 15
@@ -14583,6 +14603,10 @@ PrefabInstance:
       propertyPath: dialogue.name
       value: "Tajemniczy G\u0142os"
       objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.image
+      value: 
+      objectReference: {fileID: 21300000, guid: 69f42e4802e58b040b0ddc389b7e1008, type: 3}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 9

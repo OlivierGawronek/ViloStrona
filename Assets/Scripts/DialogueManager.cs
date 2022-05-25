@@ -81,8 +81,11 @@ public class DialogueManager : MonoBehaviour
         Player player = FindObjectOfType<Player>();
         Player.canMove = true;
         UI.SetActive(false);
-        Camera.SetBool("IsShaking", false);
-        Camera.enabled = false;
+        if (Camera != null)
+        {
+            Camera.SetBool("IsShaking", false);
+            Camera.enabled = false;
+        }
 
         if (GameManager.Oceny == 5)
         {
