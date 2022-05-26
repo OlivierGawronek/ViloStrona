@@ -193,7 +193,7 @@ PrefabInstance:
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.data[1]
       value: "B: Nie mam poj\u0119cia jak ci si\u0119 to uda\u0142o, ale zaliczy\u0142e\u015B
-        wszystkie przedmioty i to przed matruami."
+        wszystkie przedmioty i to przed maturami."
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.data[2]
@@ -205,7 +205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.data[4]
-      value: "B: Musze cie wpisa\u0107 do ksi\u0119gi rekord\xF3w szko\u0142dy..."
+      value: "B: Musze cie wpisa\u0107 do ksi\u0119gi rekord\xF3w szko\u0142y..."
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.data[5]
