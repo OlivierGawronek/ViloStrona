@@ -878,6 +878,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ca41a7269ea23c4d8221f2d2e9f343a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &539146581 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+  m_PrefabInstance: {fileID: 1419980185}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &595394322
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -995,7 +1000,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.data[10]
-      value: "B: Moge ci sprzeda\u0107 paczke szlug\xF3w."
+      value: "B: Mog\u0119 Ci sprzeda\u0107 paczke szlug\xF3w."
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.data[11]
@@ -12512,6 +12517,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4516944188969404553, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3694349901941158076, guid: d3c04016deda60e40980e52faa8b49cd, type: 3}
       propertyPath: m_Name
       value: SalaOdPolskiegoTP
@@ -12917,6 +12926,10 @@ PrefabInstance:
       propertyPath: dialogue.name
       value: "Micha\u0142 Szmeterling"
       objectReference: {fileID: 0}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.image
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d7c06012c4f1aa4abf94bf0cfb20fe9, type: 3}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 12
@@ -13996,6 +14009,10 @@ PrefabInstance:
       value: "Micha\u0142 Szmeterling"
       objectReference: {fileID: 0}
     - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+      propertyPath: dialogue.image
+      value: 
+      objectReference: {fileID: 21300000, guid: 9d7c06012c4f1aa4abf94bf0cfb20fe9, type: 3}
+    - target: {fileID: 7439069328391691718, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
       propertyPath: dialogue.sentences.Array.size
       value: 12
       objectReference: {fileID: 0}
@@ -14120,6 +14137,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+--- !u!1 &2046690563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7439069328391691771, guid: 244e0fad5c92479459cf23a0bd13c37f, type: 3}
+  m_PrefabInstance: {fileID: 2046690562}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2046690564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2046690563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5a5f166385f84154a8f6f72c9844f8e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  polski: {fileID: 539146581}
 --- !u!114 &2074553435 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6203037349524233787, guid: d80ae036c1dd5a44d88e469ec7ded9e9, type: 3}
